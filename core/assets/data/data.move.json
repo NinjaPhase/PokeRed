@@ -1,0 +1,38 @@
+{
+  "tackle": {
+    "name": "TACKLE",
+    "type": "NORMAL",
+    "base_power": 35,
+    "accuracy": 0.95,
+    "pp": 35,
+    "priority": 0,
+    "function_code": 0
+  },
+  "scratch": {
+    "name": "SCRATCH",
+    "type": "NORMAL",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 35,
+    "priority": 0,
+    "function_code": 0
+  },
+  "growl": {
+    "name": "GROWL",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 40,
+    "priority": 0,
+    "function_code": 66
+  },
+  "tailwhip": {
+    "name": "TAIL WHIP",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 30,
+    "priority": 0,
+    "function_code": 67
+  }
+}

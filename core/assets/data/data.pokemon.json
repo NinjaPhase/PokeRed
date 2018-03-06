@@ -1,0 +1,74 @@
+{
+  "1": {
+    "name": "BULBASAUR",
+    "base_stat": [45, 49, 49, 45, 65],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "2": {
+    "name": "IVYSAUR",
+    "base_stat": [60, 62, 63, 60, 80],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "3": {
+    "name": "VENUSAUR",
+    "base_stat": [80, 82, 83, 80, 100],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "4": {
+    "name": "CHARMANDER",
+    "base_stat": [39, 52, 43, 65, 50],
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "5": {
+    "name": "CHARMELEON",
+    "base_stat": [58, 64, 58, 80, 65],
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "6": {
+    "name": "CHARIZARD",
+    "base_stat": [78, 84, 78, 100, 85],
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"}
+    ]
+  },
+  "7": {
+    "name": "SQUIRTLE",
+    "base_stat": [44, 48, 65, 43, 50],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"}
+    ]
+  },
+  "8": {
+    "name": "WARTORTLE",
+    "base_stat": [59, 63, 80, 58, 65],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"}
+    ]
+  },
+  "9": {
+    "name": "BLASTOISE",
+    "base_stat": [79, 83, 100, 78, 85],
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"}
+    ]
+  }
+}

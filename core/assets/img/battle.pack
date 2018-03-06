@@ -1,0 +1,25 @@
+battle.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+enemy_box
+  rotate: false
+  xy: 0, 0
+  size: 77, 20
+  orig: 77, 20
+  offset: 0, 0
+  index: -1
+player_box
+  rotate: false
+  xy: 0, 20
+  size: 77, 28
+  orig: 77, 28
+  offset: 0, 0
+  index: -1
+health_fill
+  rotate: false
+  xy: 0, 48
+  size: 48, 2
+  origin: 48, 2
+  offset: 0, 0
+  index: -1

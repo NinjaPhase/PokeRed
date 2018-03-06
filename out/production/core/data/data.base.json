@@ -1,0 +1,7 @@
+{
+  "start_map": "player.home.upstairs",
+  "maps": [
+    "player_house_upstairs.json",
+    "player_house_downstairs.json"
+  ]
+}
