@@ -19,6 +19,7 @@ public class PokeredEditor extends JFrame {
     private JSplitPane splitPane;
 
     private DataManager dataManager;
+    private int mouseX, mouseY;
 
     /**
      * <p>
@@ -51,8 +52,9 @@ public class PokeredEditor extends JFrame {
      */
     private void addComponents() {
         this.splitPane = new JSplitPane();
+        TileSetViewer setViewer = new TileSetViewer();
         this.splitPane.setLeftComponent(new TileSetViewer());
-        this.splitPane.setRightComponent(new TileMapViewer());
+        this.splitPane.setRightComponent(new TileMapViewer(setViewer));
         this.setJMenuBar(new EditorMenuBar());
         this.getContentPane().add(new EditorToolBar(), BorderLayout.NORTH);
         this.getContentPane().add(this.splitPane);
@@ -88,5 +90,4 @@ public class PokeredEditor extends JFrame {
         }
         PokeredEditor.getEditor().start();
     }
-
 }
