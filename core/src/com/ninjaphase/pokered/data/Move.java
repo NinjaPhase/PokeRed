@@ -60,6 +60,8 @@ public class Move {
             } else {
                 eventPlayer.queueEvent(new TextBattleEvent("Nothing happened!"));
             }
+        } else {
+            eventPlayer.queueEvent(new TextBattleEvent(this.functionCode + " has not\nbeen implemented."));
         }
     }
 

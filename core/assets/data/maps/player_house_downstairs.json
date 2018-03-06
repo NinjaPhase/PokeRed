@@ -33,5 +33,8 @@
         ["warp", {"map": "player.home.upstairs", "position": [7, 6]}]
       ]
     }
-  ]
+  ],
+  "__editor__": {
+    "tileset_image": "../img/tiles.png"
+  }
 }

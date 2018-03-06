@@ -6,13 +6,11 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.ninjaphase.pokered.PokemonApplication;
-import com.ninjaphase.pokered.data.Move;
 import com.ninjaphase.pokered.data.Pokemon;
+import com.ninjaphase.pokered.entity.Player;
 import com.ninjaphase.pokered.scene.battle.Battle;
 import com.ninjaphase.pokered.scene.battle.event.BattleEvent;
 import com.ninjaphase.pokered.scene.battle.event.BattleEventPlayer;
-import com.ninjaphase.pokered.scene.battle.event.HideTextBattleEvent;
-import com.ninjaphase.pokered.scene.battle.event.TextBattleEvent;
 import com.ninjaphase.pokered.scene.gui.MessageBox;
 
 import java.util.ArrayDeque;
@@ -26,7 +24,7 @@ import java.util.Queue;
 public class SceneBattle extends Scene implements BattleEventPlayer {
 
     private Battle battle;
-    private Pokemon player, enemy;
+    private Pokemon playerPokemon, opponentPokemon;
 
     private BitmapFont font;
     private NinePatch patch;
@@ -50,14 +48,14 @@ public class SceneBattle extends Scene implements BattleEventPlayer {
      *
      * @param app The appplication.
      */
-    public SceneBattle(PokemonApplication app) {
+    public SceneBattle(PokemonApplication app, Player player, Pokemon opponentPokemon) {
         super(app);
         this.eventQueue = new ArrayDeque<>();
         this.selectedOption = -1;
-        this.player = new Pokemon(7, 5);
-        this.enemy = new Pokemon(4, 5);
-        this.playerHealth = this.player.getHealth();
-        this.enemyHealth = this.enemy.getHealth();
+        this.playerPokemon = player.getActivePokemon();
+        this.opponentPokemon = opponentPokemon;
+        this.playerHealth = this.playerPokemon.getHealth();
+        this.enemyHealth = this.opponentPokemon.getHealth();
         this.patch = new NinePatch(new Texture("img/windowskin.png"), 16, 16, 16, 16);
         this.texMisc = new TextureAtlas("img/misc.pack");
         this.texCaret = this.texMisc.findRegion("caret");
@@ -66,7 +64,7 @@ public class SceneBattle extends Scene implements BattleEventPlayer {
         this.font = new BitmapFont(Gdx.files.internal("font/basic_font.fnt"));
         this.messageBox = new MessageBox(this.patch, this.font, "");
         app.bgColor.set(1.0f, 1.0f, 1.0f, 1.0f);
-        this.battle = new Battle(this, this.player, this.enemy);
+        this.battle = new Battle(this, this.playerPokemon, this.opponentPokemon);
         this.battle.beginBattle();
     }
 
@@ -93,19 +91,19 @@ public class SceneBattle extends Scene implements BattleEventPlayer {
     void render(SpriteBatch batch) {
         // Rendering
         batch.draw(this.battleTextures.findRegion("enemy_box"), 11.0f, 115.0f);
-        float enemyPercentage = (float)this.enemyHealth / (float)this.enemy.getStat(0);
+        float enemyPercentage = (float)this.enemyHealth / (float)this.opponentPokemon.getStat(0);
         batch.draw(this.texHealthFill, 32.0f, 123.0f, 48*enemyPercentage, 2);
-        this.font.draw(batch, this.enemy.getName(), 8.0f, 144.0f);
-        this.font.draw(batch, String.valueOf(this.enemy.getLevel()), 40.0f, 136.0f);
-        batch.draw(this.enemy.getSpecies().getFrontTexture(), 92.0f, 90.0f);
+        this.font.draw(batch, this.opponentPokemon.getName(), 8.0f, 144.0f);
+        this.font.draw(batch, String.valueOf(this.opponentPokemon.getLevel()), 40.0f, 136.0f);
+        batch.draw(this.opponentPokemon.getSpecies().getFrontTexture(), 92.0f, 90.0f);
         batch.draw(this.battleTextures.findRegion("player_box"), 72.0f, 51.0f);
-        float playerPercentage = (float)this.playerHealth / (float)this.player.getStat(0);
+        float playerPercentage = (float)this.playerHealth / (float)this.playerPokemon.getStat(0);
         batch.draw(this.texHealthFill, 96.0f, 67.0f, 48*playerPercentage, 2);
-        this.font.draw(batch, this.player.getName(), 80.0f, 88.0f);
-        this.font.draw(batch, String.valueOf(this.player.getLevel()), 120.0f, 80.0f);
-        batch.draw(this.player.getSpecies().getBackTex(), 4.0f, 48.0f);
+        this.font.draw(batch, this.playerPokemon.getName(), 80.0f, 88.0f);
+        this.font.draw(batch, String.valueOf(this.playerPokemon.getLevel()), 120.0f, 80.0f);
+        batch.draw(this.playerPokemon.getSpecies().getBackTex(), 4.0f, 48.0f);
         this.font.draw(batch, String.valueOf(this.playerHealth), 98.0f, 64.0f);
-        this.font.draw(batch, String.valueOf(this.player.getStat(0)), 128.0f, 64.0f);
+        this.font.draw(batch, String.valueOf(this.playerPokemon.getStat(0)), 128.0f, 64.0f);
 
         // Controls
         this.patch.draw(batch, 0, 0.0f, 160.0f, 48.0f);
@@ -133,12 +131,12 @@ public class SceneBattle extends Scene implements BattleEventPlayer {
         this.patch.draw(batch, 0.0f, 40.0f, 88.0f, 40.0f);
         String moves = "";
         for(int i = 0; i < 4; i++) {
-            moves += (this.player.getMove(i) == null ? "-" : this.player.getMove(i).getName()) + "\n";
+            moves += (this.playerPokemon.getMove(i) == null ? "-" : this.playerPokemon.getMove(i).getName()) + "\n";
         }
         this.font.draw(batch, moves, 48.0f, 40.0f);
         batch.draw(this.texCaret, 40.0f, 32.0f-(this.moveSelectIndex*8f));
-        this.font.draw(batch, "TYPE/\n " + this.player.getMove(this.moveSelectIndex).getType(), 8.0f, 72.0f);
-        this.font.draw(batch, "35/" + this.player.getMove(this.moveSelectIndex).getTotalPP(), 40.0f, 56.0f);
+        this.font.draw(batch, "TYPE/\n " + this.playerPokemon.getMove(this.moveSelectIndex).getType(), 8.0f, 72.0f);
+        this.font.draw(batch, "35/" + this.playerPokemon.getMove(this.moveSelectIndex).getTotalPP(), 40.0f, 56.0f);
     }
 
     @Override
@@ -168,7 +166,7 @@ public class SceneBattle extends Scene implements BattleEventPlayer {
                 }
             } else if (this.selectedOption == 0) {
                 if (keycode == Input.Keys.DOWN) {
-                    this.moveSelectIndex = Math.min(this.player.getMoveCount() - 1, this.moveSelectIndex + 1);
+                    this.moveSelectIndex = Math.min(this.playerPokemon.getMoveCount() - 1, this.moveSelectIndex + 1);
                 } else if (keycode == Input.Keys.UP) {
                     this.moveSelectIndex = Math.max(0, this.moveSelectIndex - 1);
                 } else if (keycode == Input.Keys.Z) {

@@ -38,10 +38,14 @@ public class Species {
         this.name = data.getString("name");
         this.frontTex = frontTex;
         this.backTex = backTex;
-        for(int i = 0; i < data.get("learnset").size; i++) {
-            Move m = PokemonApplication.getApplication().getDataManager().getMove(
-                    data.get("learnset").get(i).getString("move"));
-            this.learnset.add(new LearnsetPair(data.get("learnset").get(i).getInt("level"), m));
+        if(data.get("learnset") != null) {
+            for (int i = 0; i < data.get("learnset").size; i++) {
+                Move m = PokemonApplication.getApplication().getDataManager().getMove(
+                        data.get("learnset").get(i).getString("move"));
+                if(m == null)
+                    throw new NullPointerException("Given move was null " + data.get("learnset").get(i).getString("move"));
+                this.learnset.add(new LearnsetPair(data.get("learnset").get(i).getInt("level"), m));
+            }
         }
     }
 

@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.ninjaphase.pokered.PokemonApplication;
+import com.ninjaphase.pokered.data.Pokemon;
 import com.ninjaphase.pokered.data.TileMap;
 import com.ninjaphase.pokered.entity.*;
 import com.ninjaphase.pokered.entity.event.MapEvent;
@@ -137,9 +138,6 @@ public class SceneMap extends Scene implements MapEventPlayer, HumanMoveFinishEv
                     this.queueEvent(e.getFirstEvent());
                 }
             }
-        } else if(keycode == Input.Keys.B) {
-            app.getSceneManager().push(new SceneBattle(app));
-            return true;
         }
         return false;
     }

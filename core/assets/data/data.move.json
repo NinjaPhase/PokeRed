@@ -34,5 +34,428 @@
     "pp": 30,
     "priority": 0,
     "function_code": 67
+  },
+  "leechseed": {
+    "name": "LEECH SEED",
+    "type": "GRASS",
+    "base_power": 0,
+    "accuracy": 0.9,
+    "pp": 10,
+    "priority": 0,
+    "function_code": 220
+  },
+  "vinewhip": {
+    "name": "VINE WHIP",
+    "type": "GRASS",
+    "base_power": 35,
+    "accuracy": 1,
+    "pp": 10,
+    "priority": 0,
+    "function_code": 0
+  },
+  "poisonpowder": {
+    "name": "POISONPOWDER",
+    "type": "POISON",
+    "base_power": 0,
+    "accuracy": 0.75,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 5
+  },
+  "razorleaf": {
+    "name": "RAZOR LEAF",
+    "type": "GRASS",
+    "base_power": 55,
+    "accuracy": 0.95,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 0
+  },
+  "growth": {
+    "name": "GROWTH",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 40
+  },
+  "sleeppowder": {
+    "name": "SLEEP POWDER",
+    "type": "GRASS",
+    "base_power": 0,
+    "accuracy": 0.75,
+    "pp": 15,
+    "priority": 0,
+    "function_code": 3
+  },
+  "solarbeam": {
+    "name": "SOLAR BEAM",
+    "type": "GRASS",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 10,
+    "priority": 0,
+    "function_code": 196
+  },
+  "ember": {
+    "name": "EMBER",
+    "type": "FIRE",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 10,
+    "additional_chance": 0.1
+  },
+  "leer": {
+    "name": "LEER",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 30,
+    "priority": 0,
+    "function_code": 67
+  },
+  "rage": {
+    "name": "RAGE",
+    "type": "NORMAL",
+    "base_power": 20,
+    "accuracy": 1,
+    "pp": 20,
+    "priority": 0,
+    "function_code": 147
+  },
+  "slash": {
+    "name": "SLASH",
+    "type": "NORMAL",
+    "base_power": 70,
+    "accuracy": 1,
+    "pp": 20,
+    "priority": 0,
+    "function_code": 0
+  },
+  "flamethrower": {
+    "name": "FLAMETHROWER",
+    "type": "FIRE",
+    "base_power": 95,
+    "accuracy": 1,
+    "pp": 15,
+    "priority": 0,
+    "function_code": 10,
+    "additional_chance": 0.1
+  },
+  "firespin": {
+    "name": "FIRE SPIN",
+    "type": "FIRE",
+    "base_power": 15,
+    "accuracy": 0.7,
+    "pp": 15,
+    "priority": 0,
+    "function_code": 207
+  },
+  "bubble": {
+    "name": "BUBBLE",
+    "type": "WATER",
+    "base_power": 20,
+    "accuracy": 1,
+    "pp": 30,
+    "priority": 0,
+    "function_code": 68,
+    "additional_chance": 0.33
+  },
+  "watergun": {
+    "name": "WATER GUN",
+    "type": "WATER",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 0
+  },
+  "bite": {
+    "name": "BITE",
+    "type": "NORMAL",
+    "base_power": 60,
+    "accuracy": 1,
+    "pp": 25,
+    "priority": 0,
+    "function_code": 15,
+    "additional_chance": 0.1
+  },
+  "withdraw": {
+    "name": "WITHDRAW",
+    "type": "WATER",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 40,
+    "priority": 0,
+    "function_code": 29
+  },
+  "skullbash": {
+    "name": "SKULL BASH",
+    "type": "NORMAL",
+    "base_power": 100,
+    "accuracy": 1,
+    "pp": 15,
+    "function_code": 200
+  },
+  "hydropump": {
+    "name": "HYDRO PUMP",
+    "type": "WATER",
+    "base_power": 120,
+    "accuracy": 0.8,
+    "pp": 5,
+    "function_code": 0
+  },
+  "stringshot": {
+    "name": "STRING SHOT",
+    "type": "BUG",
+    "base_power": 0,
+    "accuracy": 0.95,
+    "pp": 40,
+    "function_code": 68
+  },
+  "harden": {
+    "name": "HARDEN",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 30,
+    "function_code": 29
+  },
+  "confusion": {
+    "name": "CONFUSION",
+    "type": "PSYCHIC",
+    "base_power": 50,
+    "accuracy": 1,
+    "pp": 25,
+    "function_code": 19,
+    "additional_chance": 0.1
+  },
+  "stunspore": {
+    "name": "STUN SPORE",
+    "type": "GRASS",
+    "base_power": 0,
+    "accuracy": 0.75,
+    "pp": 30,
+    "function_code": 7
+  },
+  "supersonic": {
+    "name": "SUPERSONIC",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 19
+  },
+  "whirlwind": {
+    "name": "WHIRLWIND",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 0.85,
+    "pp": 20,
+    "function_code": 235
+  },
+  "psybeam": {
+    "name": "PSYBEAM",
+    "type": "PSYCHIC",
+    "base_power": 65,
+    "accuracy": 1,
+    "pp": 1,
+    "function_code": 19,
+    "additional_chance": 0.1
+  },
+  "poisonsting": {
+    "name": "POISON STING",
+    "type": "POISON",
+    "base_power": 15,
+    "accuracy": 1,
+    "pp": 35,
+    "function_code": 5,
+    "additional_chance": 0.2
+  },
+  "furyattack": {
+    "name": "FURY ATTACK",
+    "type": "NORMAL",
+    "base_power": 15,
+    "accuracy": 0.85,
+    "pp": 20,
+    "function_code": 192
+  },
+  "focusenergy": {
+    "name": "FOCUS ENERGY",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 35
+  },
+  "twineedle": {
+    "name": "TWINEEDLE",
+    "type": "BUG",
+    "base_power": 25,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 190,
+    "additional_chance": 0.2
+  },
+  "pinmissile": {
+    "name": "PIN MISSILE",
+    "type": "BUG",
+    "base_power": 14,
+    "accuracy": 0.85,
+    "pp": 20,
+    "function_code": 192
+  },
+  "agility": {
+    "name": "AGILITY",
+    "type": "PSYCHIC",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 30,
+    "function_code": 48
+  },
+  "gust": {
+    "name": "GUST",
+    "type": "NORMAL",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 35,
+    "function_code": 0
+  },
+  "sandattack": {
+    "name": "SAND-ATTACK",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 15,
+    "function_code": 71
+  },
+  "quickattack": {
+    "name": "QUICK ATTACK",
+    "type": "NORMAL",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 30,
+    "function_code": 0,
+    "priority": 1
+  },
+  "wingattack": {
+    "name": "WING ATTACK",
+    "type": "FLYING",
+    "base_power": 35,
+    "accuracy": 1,
+    "pp": 35,
+    "function_code": 0
+  },
+  "mirrormove": {
+    "name": "MIRROR MOVE",
+    "type": "FLYING",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 174,
+    "priority": -1
+  },
+  "hyperfang": {
+    "name": "HYPER FANG",
+    "type": "NORMAL",
+    "base_power": 80,
+    "accuracy": 0.9,
+    "pp": 15,
+    "function_code": 15,
+    "additional_chance": 0.1
+  },
+  "superfang": {
+    "name": "SUPER FANG",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 0.9,
+    "pp": 10,
+    "function_code": 108
+  },
+  "peck": {
+    "name": "PECK",
+    "type": "FLYING",
+    "base_power": 35,
+    "accuracy": 1,
+    "pp": 35,
+    "function_code": 0
+  },
+  "drillpeck": {
+    "name": "PECK",
+    "type": "FLYING",
+    "base_power": 80,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 0
+  },
+  "wrap": {
+    "name": "WRAP",
+    "type": "NORMAL",
+    "base_power": 15,
+    "accuracy": 0.85,
+    "pp": 20,
+    "function_code": 207
+  },
+  "glare": {
+    "name": "GLARE",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 0.75,
+    "pp": 30,
+    "function_code": 7
+  },
+  "screech": {
+    "name": "SCREETCH",
+    "type": "NORMAL",
+    "base_power": 0,
+    "accuracy": 0.85,
+    "pp": 40,
+    "function_code": 76
+  },
+  "acid": {
+    "name": "ACID",
+    "type": "POISON",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 30,
+    "function_code": 46,
+    "additional_chance": 0.33
+  },
+  "thundershock": {
+    "name": "THUNDERSHOCK",
+    "type": "ELECTRIC",
+    "base_power": 40,
+    "accuracy": 1,
+    "pp": 30,
+    "function_code": 7,
+    "additional_chance": 0.1
+  },
+  "thunderwave": {
+    "name": "THUNDERWAVE",
+    "type": "ELECTRIC",
+    "base_power": 0,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 7
+  },
+  "swift": {
+    "name": "SWIFT",
+    "type": "NORMAL",
+    "base_power": 60,
+    "accuracy": 1,
+    "pp": 20,
+    "function_code": 165
+  },
+  "thunder": {
+    "name": "THUNDER",
+    "type": "ELECTRIC",
+    "base_power": 120,
+    "accuracy": 0.7,
+    "pp": 10,
+    "function_code": 7,
+    "additional_chance": 0.1
   }
 }
