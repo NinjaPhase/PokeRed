@@ -21,19 +21,24 @@ public class TileSetViewer extends JPanel implements MapChangeListener, MouseLis
     private int selectedTile;
     private TileMap tileMap;
 
+    private JScrollPane scrollPane;
+
     /**
      * <p>
      *     Constructs a new {@code TileMapViewer}.
      * </p>
      */
-    public TileSetViewer() {
+    public TileSetViewer(JScrollPane scrollPane) {
+        this.scrollPane = scrollPane;
+        this.setBorder(BorderFactory.createLoweredBevelBorder());
         this.addMouseListener(this);
+        this.setPreferredSize(new Dimension(8*16, 16));
         PokeredEditor.getEditor().getDataManager().addMapChangeListener(this);
-        this.setMinimumSize(new Dimension(8*16, 16));
     }
 
     @Override
     public void paint(Graphics gg) {
+        super.paint(gg);
 
         if(tileMap == null)
             return;
@@ -56,11 +61,20 @@ public class TileSetViewer extends JPanel implements MapChangeListener, MouseLis
         g.setColor(SELECTED_COLOR);
         g.fillRect((selectedTile%8)*16, (selectedTile/8)*16, 16, 16);
         g.setComposite(defComp);
+
+        this.paintBorder(gg);
     }
 
     @Override
     public void onMapChange(TileMap newMap) {
         this.tileMap = newMap;
+        if(this.tileMap != null) {
+            this.setPreferredSize(new Dimension(8 * 16, (this.tileMap.getTileset().length/8)*16));
+        } else {
+            this.setPreferredSize(new Dimension(16, 16));
+        }
+        scrollPane.revalidate();
+        scrollPane.repaint();
         this.repaint();
     }
 

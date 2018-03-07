@@ -30,7 +30,7 @@ public class EventEntity extends HumanEntity implements Disposable {
      * @param map The map.
      */
     public EventEntity(TileMap map, JsonValue data) {
-        super(null, map, data.get("position").getInt(0), data.get("position").getInt(1));
+        super(null, map, data.get("position").getInt(0), map.getHeight()-data.get("position").getInt(1)-1);
         this.eventList = new LinkedList<>();
         this.data = data;
         this.parseEvents();

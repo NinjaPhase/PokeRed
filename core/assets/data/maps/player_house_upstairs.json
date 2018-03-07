@@ -33,7 +33,7 @@
       ]
     },
     {
-      "position": [7, 6],
+      "position": [7, 1],
       "trigger": "touch",
       "events": [
         ["warp", {"map": "player.home.downstairs", "position": [7, 7]}]
