@@ -1,0 +1,39 @@
+random_screen.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+random_bg
+  rotate: false
+  xy: 0, 0
+  size: 320, 180
+  orig: 320, 180
+  offset: 0, 0
+  index: -1
+button
+  rotate: false
+  xy: 0, 180
+  size: 98, 20
+  orig: 98, 20
+  offset: 0, 0
+  index: -1
+button_hover
+  rotate: false
+  xy: 0, 200
+  size: 98, 20
+  orig: 98, 20
+  offset: 0, 0
+  index: -1
+button_selected
+  rotate: false
+  xy: 0, 220
+  size: 98, 20
+  orig: 98, 20
+  offset: 0, 0
+  index: -1
+map_info
+  rotate: false
+  xy: 98, 180
+  size: 200, 164
+  orig: 200, 164
+  offset: 0, 0
+  index: -1

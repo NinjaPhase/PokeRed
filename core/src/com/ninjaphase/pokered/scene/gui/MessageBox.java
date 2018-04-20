@@ -3,6 +3,7 @@ package com.ninjaphase.pokered.scene.gui;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.ninjaphase.pokered.PokemonApplication;
 
 /**
  * <p>
@@ -27,9 +28,8 @@ public class MessageBox {
      *
      * @param patch The ninepatch.
      * @param font The bitmap font.
-     * @param message The message.
      */
-    public MessageBox(NinePatch patch, BitmapFont font, String message) {
+    public MessageBox(NinePatch patch, BitmapFont font) {
         this.patch = patch;
         this.font = font;
         this.setMessage("");
@@ -43,6 +43,8 @@ public class MessageBox {
             while (timer >= MESSAGE_SPEED) {
                 this.position++;
                 this.msg = this.fullMessage.substring(0, this.position);
+                if(this.msg.length() >= this.fullMessage.length())
+                    break;
                 timer -= MESSAGE_SPEED;
             }
         }
@@ -50,14 +52,14 @@ public class MessageBox {
 
     public void render(SpriteBatch batch) {
         if(this.visible) {
-            this.patch.draw(batch, 0, 0, 160, 48);
+            this.patch.draw(batch, 0, 0, PokemonApplication.V_WIDTH, 48);
             this.font.draw(batch, this.msg, 8.0f, 32.0f);
         }
     }
 
     public void setMessage(String message) {
         this.msg = "";
-        this.fullMessage = message.replaceAll("\n", "\n\n");
+        this.fullMessage = message;
         this.position = 0;
         this.timer = 0.0f;
     }

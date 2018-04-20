@@ -1,7 +1,7 @@
 package com.ninjaphase.pokered.entity;
 
 import com.badlogic.gdx.math.Vector2;
-import com.ninjaphase.pokered.data.TileMap;
+import com.ninjaphase.pokered.data.map.TileMap;
 
 /**
  * <p>

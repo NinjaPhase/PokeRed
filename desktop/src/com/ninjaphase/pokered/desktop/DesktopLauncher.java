@@ -12,9 +12,11 @@ import com.ninjaphase.pokered.PokemonApplication;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.title = "Pokemon Red";
-		config.width = 160;
-		config.height = 144;
+		config.title = "PokeDroid - A Pokemon Adventure Player";
+		config.width = PokemonApplication.V_WIDTH;
+		config.height = (int)(config.width*(9f/16f));
+		config.resizable = false;
+		PokemonApplication.setMidiPlayer(new DesktopMidiPlayer());
 		new LwjglApplication(PokemonApplication.getApplication(), config);
 	}
 }

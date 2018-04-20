@@ -3,7 +3,7 @@ package com.ninjaphase.pokered.scene.battle.event;
 import com.ninjaphase.pokered.scene.battle.Battle;
 
 public class StatusBattleEvent extends BattleEvent {
-    private static float SPEED = 2.0f;
+    private static final float SPEED = 2.0f;
 
     private float t = 0.0f;
     private int oldValue, newValue;
@@ -20,19 +20,19 @@ public class StatusBattleEvent extends BattleEvent {
     public void begin(BattleEventPlayer eventPlayer) {
         this.player = eventPlayer;
         this.oldValue = this.party == Battle.BATTLE_PARTY.PLAYER ?
-                eventPlayer.getPlayerStatusHealth() : eventPlayer.getOpponentStatusHealth();
+                eventPlayer.getPlayerStatus().getHealth() : eventPlayer.getEnemyStatus().getHealth();
     }
 
     @Override
     public void update(float deltaTime) {
-        t += deltaTime * SPEED;
+        t = Math.min(1.0f, t + (deltaTime * SPEED));
         int inter = oldValue + (int)((newValue-oldValue)*t);
-        if(this.party == Battle.BATTLE_PARTY.PLAYER) player.setPlayerStatusHealth(inter);
-        else if (this.party == Battle.BATTLE_PARTY.OPPONENT) player.setOpponentStatusHealth(inter);
+        if(this.party == Battle.BATTLE_PARTY.PLAYER) player.getPlayerStatus().setHealth(inter);
+        else if (this.party == Battle.BATTLE_PARTY.OPPONENT) player.getEnemyStatus().setHealth(inter);
     }
 
     @Override
     public boolean isFinished() {
-        return t > 1.0f;
+        return t >= 1.0f;
     }
 }

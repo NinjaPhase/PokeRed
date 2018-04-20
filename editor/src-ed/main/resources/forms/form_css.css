@@ -1,0 +1,31 @@
+.menu-bar {
+    -fx-background-color: rgb(191, 219, 255);
+}
+
+.menu {
+
+}
+
+.menu .label {
+    -fx-text-fill: rgb(21, 66, 139);
+}
+
+.tool-bar {
+    -fx-background-color: linear-gradient(to bottom, rgb(227, 239, 255), rgb(179, 212, 255));
+}
+
+.tool-bar .button {
+    -fx-background-color: none;
+    -fx-border-radius: 2px;
+    -fx-border-color: rgba(85, 123, 175, 0);
+}
+
+.tool-bar .button:hover {
+    -fx-background-color: linear-gradient(to bottom, rgb(254, 247, 213) 40%, rgb(255, 208, 72) 40%, rgb(255, 229, 159) 100%);
+    -fx-border-color: rgb(85, 123, 175);
+}
+
+.tool-bar .button:pressed {
+    -fx-background-color: linear-gradient(to bottom, rgb(252, 177, 109) 40%, rgb(255, 141, 5) 40%, rgb(255, 196, 80) 100%);
+    -fx-border-color: rgb(85, 123, 175);
+}

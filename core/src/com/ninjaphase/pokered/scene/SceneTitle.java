@@ -2,13 +2,12 @@ package com.ninjaphase.pokered.scene;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.ninjaphase.pokered.PokemonApplication;
-import com.ninjaphase.pokered.data.Species;
+import com.ninjaphase.pokered.data.pokemon.Pokemon;
+import com.ninjaphase.pokered.data.pokemon.Species;
 
 /**
  * <p>
@@ -17,14 +16,13 @@ import com.ninjaphase.pokered.data.Species;
  */
 public class SceneTitle extends Scene {
     private static final float SHOWN_TIMER = 4.0f, MOVE_SPEED = 256.0f,
-            STOP_LOCATION = 32.0f, TITLE_Y = 86.0f, TITLE_SPEED = 127.0f, VERSION_X = 55.0f;
+            STOP_LOCATION = 60.0f, TITLE_Y = 86.0f, TITLE_SPEED = 127.0f, VERSION_X = 90f;
 
     private TextureAtlas texTitleAtlas;
     private TextureRegion texLogo, texVersion;
     private Species shownSpecies;
     private float timer, speciesX, speciesVel, titleY, versionX;
     private boolean isMoving, isStopping, titleFin, versionFin;
-    private BitmapFont font;
 
     /**
      * <p>
@@ -35,21 +33,24 @@ public class SceneTitle extends Scene {
      */
     public SceneTitle(PokemonApplication app) {
         super(app);
-
-        this.font = new BitmapFont(Gdx.files.internal("font/basic_font.fnt"));
-        this.texTitleAtlas = new TextureAtlas("img/title.pack");
+        PokemonApplication.getMidiPlayer().setMidiFile(0, Gdx.files.internal("audio/title.mid"));
+        PokemonApplication.getMidiPlayer().setLoopPosition(0, 1080);
+        PokemonApplication.getMidiPlayer().setLooping(0, true);
+        PokemonApplication.getMidiPlayer().play(0);
+        this.texTitleAtlas = this.resourceManager.add("title",
+                new TextureAtlas("img/system/title.pack"));
         this.texLogo = this.texTitleAtlas.findRegion("logo");
         this.texVersion = this.texTitleAtlas.findRegion("red_version");
         this.shownSpecies = app.getDataManager().getSpecies(3);
         this.speciesX = STOP_LOCATION;
         this.titleY = 144.0f;
-        this.versionX = 160.0f;
+        this.versionX = 240.0f;
         this.isMoving = true;
         this.isStopping = false;
     }
 
     @Override
-    void update(float deltaTime) {
+    protected void update(float deltaTime) {
         if(!titleFin) {
             this.titleY -= deltaTime * TITLE_SPEED;
 
@@ -78,7 +79,7 @@ public class SceneTitle extends Scene {
                 } else {
                     if (this.speciesX < -32.0f) {
                         this.shownSpecies = app.getDataManager().getRandomSpecies();
-                        this.speciesX = 160.0f;
+                        this.speciesX = PokemonApplication.V_WIDTH+20f;
                         this.isStopping = true;
                     }
                 }
@@ -93,19 +94,19 @@ public class SceneTitle extends Scene {
     }
 
     @Override
-    void render(SpriteBatch batch) {
-        batch.draw(this.texTitleAtlas.findRegion("copyright"), 16.0f, 2.0f);
-        batch.draw(this.texLogo, 16.0f, titleY);
+    protected void render(SpriteBatch batch) {
+        batch.draw(this.texTitleAtlas.findRegion("copyright"), 50f, 2.0f);
+        batch.draw(this.texLogo, 50f, titleY);
         batch.draw(this.texVersion, versionX, 76.0f);
         batch.draw(this.shownSpecies.getFrontTexture(), speciesX, 8.0f);
-        batch.draw(this.texTitleAtlas.findRegion("player"), 80.0f, 8.0f);
+        batch.draw(this.texTitleAtlas.findRegion("player"), 120f, 8.0f);
     }
 
     @Override
-    boolean keyDown(int keycode) {
+    protected boolean keyDown(int keycode) {
         if(keycode == Input.Keys.Z) {
             app.getSceneManager().pop();
-            app.getSceneManager().push(new SceneMap(app));
+            app.getSceneManager().push(new SceneTitleMenu(app));
             return true;
         }
         return false;
@@ -113,6 +114,6 @@ public class SceneTitle extends Scene {
 
     @Override
     public void dispose() {
-        this.texTitleAtlas.dispose();
+        this.resourceManager.dispose();
     }
 }

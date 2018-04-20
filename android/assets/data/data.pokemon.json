@@ -1,0 +1,701 @@
+{
+  "1": {
+    "name": "Bulbasaur",
+    "type": ["grass", "poison"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [45, 49, 49, 65, 65, 45],
+    "ev_yield": [0, 0, 0, 0, 1, 0],
+    "exp_yield": 64,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "overgrow",
+    "hidden_ability": "chlorophyll",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"},
+      {"level": 7, "move": "leechseed"},
+      {"level": 13, "move": "vinewhip"},
+      {"level": 20, "move": "poisonpowder"},
+      {"level": 27, "move": "razorleaf"},
+      {"level": 34, "move": "growth"},
+      {"level": 41, "move": "sleeppowder"},
+      {"level": 48, "move": "solarbeam"}
+    ],
+    "egg_groups": [ "monster", "grass" ],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Ivysaur", "level", 16]
+    ],
+    "random_encounter": {
+      "common_grass": 0.01,
+      "rare_grass": 0.2
+    }
+  },
+  "2": {
+    "name": "Ivysaur",
+    "type": ["grass", "poison"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [60, 62, 63, 80, 80, 60],
+    "ev_yield": [0, 0, 0, 1, 1, 0],
+    "exp_yield": 141,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "overgrow",
+    "hidden_ability": "chlorophyll",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"},
+      {"level": 1, "move": "leechseed"},
+      {"level": 7, "move": "leechseed"},
+      {"level": 13, "move": "vinewhip"},
+      {"level": 22, "move": "poisonpowder"},
+      {"level": 30, "move": "razorleaf"},
+      {"level": 38, "move": "growth"},
+      {"level": 46, "move": "sleeppowder"},
+      {"level": 54, "move": "solarbeam"}
+    ],
+    "egg_groups": ["monster", "grass"],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Venusaur", "level", 32]
+    ]
+  },
+  "3": {
+    "name": "Venusaur",
+    "type": ["grass", "poison"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [80, 82, 83, 100, 100, 80],
+    "ev_yield": [0, 0, 0, 2, 1, 0],
+    "exp_yield": 208,
+    "catch_rate": 45,
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "growl"},
+      {"level": 1, "move": "leechseed"},
+      {"level": 1, "move": "vinewhip"},
+      {"level": 7, "move": "leechseed"},
+      {"level": 13, "move": "vinewhip"},
+      {"level": 22, "move": "poisonpowder"},
+      {"level": 30, "move": "razorleaf"},
+      {"level": 43, "move": "growth"},
+      {"level": 55, "move": "sleeppowder"},
+      {"level": 65, "move": "solarbeam"}
+    ],
+    "egg_groups": ["monster", "grass"],
+    "egg_steps": 5355
+  },
+  "4": {
+    "name": "Charmander",
+    "type": ["fire"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [39, 52, 43, 60, 50, 65],
+    "ev_yield": [0, 0, 0, 0, 0, 1],
+    "exp_yield": 65,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "blaze",
+    "hidden_ability": "solarpower",
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"},
+      {"level": 9, "move": "ember"},
+      {"level": 15, "move": "leer"},
+      {"level": 22, "move": "rage"},
+      {"level": 30, "move": "slash"},
+      {"level": 38, "move": "flamethrower"},
+      {"level": 46, "move": "firespin"}
+    ],
+    "egg_groups": ["monster", "dragon"],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Charmeleon", "level", 16]
+    ],
+    "random_encounter": {
+      "common_grass": 0.01,
+      "rare_grass": 0.2
+    }
+  },
+  "5": {
+    "name": "Charmeleon",
+    "type": ["fire"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [58, 64, 58, 80, 65, 80],
+    "ev_yield": [0, 0, 0, 1, 0, 1],
+    "exp_yield": 142,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "blaze",
+    "hidden_ability": "solarpower",
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"},
+      {"level": 1, "move": "ember"},
+      {"level": 9, "move": "ember"},
+      {"level": 15, "move": "leer"},
+      {"level": 24, "move": "rage"},
+      {"level": 33, "move": "slash"},
+      {"level": 42, "move": "flamethrower"},
+      {"level": 56, "move": "firespin"}
+    ],
+    "egg_groups": [ "monster", "dragon" ],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Charizard", "level", 36]
+    ]
+  },
+  "6": {
+    "name": "Charizard",
+    "type": ["fire", "flying"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [78, 84, 78, 100, 85],
+    "ev_yield": [0, 0, 0, 3, 0, 0],
+    "exp_yield": 209,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "blaze",
+    "hidden_ability": "solarpower",
+    "learnset": [
+      {"level": 1, "move": "scratch"},
+      {"level": 1, "move": "growl"},
+      {"level": 1, "move": "ember"},
+      {"level": 1, "move": "leer"},
+      {"level": 9, "move": "ember"},
+      {"level": 15, "move": "leer"},
+      {"level": 24, "move": "rage"},
+      {"level": 36, "move": "slash"},
+      {"level": 46, "move": "flamethrower"},
+      {"level": 55, "move": "firespin"}
+    ],
+    "egg_groups": [ "monster", "dragon" ],
+    "egg_steps": 5355
+  },
+  "7": {
+    "name": "Squirtle",
+    "type": ["water"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [44, 48, 65, 50, 64, 43],
+    "ev_yield": [0, 0, 1, 0, 0, 0],
+    "exp_yield": 66,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "torrent",
+    "hidden_ability": "raindish",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"},
+      {"level": 8, "move": "bubble"},
+      {"level": 15, "move": "watergun"},
+      {"level": 22, "move": "bite"},
+      {"level": 28, "move": "withdraw"},
+      {"level": 35, "move": "skullbash"},
+      {"level": 42, "move": "hydropump"}
+    ],
+    "egg_groups": ["monster", "water 1"],
+    "evolution": [
+      ["Wartortle", "level", 16]
+    ],
+    "random_encounter": {
+      "common_grass": 0.01,
+      "rare_grass": 0.2
+    }
+  },
+  "8": {
+    "name": "Wartortle",
+    "type": ["water"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [59, 63, 80, 65, 80, 58],
+    "ev_yield": [0, 0, 1, 0, 1, 0],
+    "exp_yield": 143,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "torrent",
+    "hidden_ability": "raindish",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"},
+      {"level": 1, "move": "bubble"},
+      {"level": 8, "move": "bubble"},
+      {"level": 15, "move": "watergun"},
+      {"level": 24, "move": "bite"},
+      {"level": 31, "move": "withdraw"},
+      {"level": 39, "move": "skullbash"},
+      {"level": 47, "move": "hydropump"}
+    ],
+    "egg_groups": ["monster", "water 1"],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Blastoise", "level", 36]
+    ]
+  },
+  "9": {
+    "name": "Blastoise",
+    "type": ["water"],
+    "gender_rate": 0.125,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [79, 83, 100, 85, 105, 78],
+    "ev_yield": [0, 0, 0, 0, 3, 0],
+    "exp_yield": 210,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "torrent",
+    "hidden_ability": "raindish",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"},
+      {"level": 1, "move": "bubble"},
+      {"level": 1, "move": "watergun"},
+      {"level": 8, "move": "bubble"},
+      {"level": 15, "move": "watergun"},
+      {"level": 24, "move": "bite"},
+      {"level": 31, "move": "withdraw"},
+      {"level": 42, "move": "skullbash"},
+      {"level": 52, "move": "hydropump"}
+    ],
+    "egg_groups": ["monster", "water 1"],
+    "egg_steps": 5355
+  },
+  "10": {
+    "name": "Caterpie",
+    "type": ["bug"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [45, 30, 35, 20, 20, 45],
+    "ev_yield": [1, 0, 0, 0, 0, 0],
+    "exp_yield": 53,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": "shielddust",
+    "hidden_ability": "runaway",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "stringshot"}
+    ],
+    "egg_groups": [ "bug" ],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Metapod", "level", 7]
+    ],
+    "random_encounter": {
+      "common_grass": 0.5
+    }
+  },
+  "11": {
+    "name": "Metapod",
+    "type": ["bug"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [50, 20, 55, 25, 25, 30],
+    "ev_yield": [0, 0, 2, 0, 0, 0],
+    "exp_yield": 72,
+    "catch_rate": 120,
+    "happiness": 70,
+    "ability": "shedskin",
+    "learnset": [
+      {"level": 1, "move": "harden"}
+    ],
+    "egg_groups": ["bug"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Butterfree", "level", 10]
+    ]
+  },
+  "12": {
+    "name": "Butterfree",
+    "type": ["bug", "flying"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [60, 45, 50, 80, 80, 70],
+    "ev_yield": [0, 0, 0, 2, 1, 0],
+    "exp_yield": 160,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "compoundeyes",
+    "hidden_ability": "tintedlens",
+    "learnset": [
+      {"level": 1, "move": "confusion"},
+      {"level": 12, "move": "confusion"},
+      {"level": 15, "move": "poisonpowder"},
+      {"level": 15, "move": "stunspore"},
+      {"level": 17, "move": "sleeppowder"},
+      {"level": 21, "move": "supersonic"},
+      {"level": 26, "move": "whirlwind"},
+      {"level": 32, "move": "psybeam"}
+    ],
+    "egg_groups": ["bug"],
+    "egg_steps": 4080
+  },
+  "13": {
+    "name": "Weedle",
+    "type": ["bug", "poison"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [40, 35, 30, 20, 20, 50],
+    "ev_yield": [0, 0, 0, 0, 0, 1],
+    "exp_yield": 52,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": "shielddust",
+    "hidden_ability": "runaway",
+    "learnset": [
+      {"level": 1, "move": "poisonsting"},
+      {"level": 1, "move": "stringshot"}
+    ],
+    "egg_groups": ["bug"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Weedle", "level", 7]
+    ],
+    "random_encounter": {
+      "common_grass": 0.5
+    }
+  },
+  "14": {
+    "name": "Kakuna",
+    "type": ["bug", "poison"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [45, 25, 50, 25, 25, 35],
+    "ev_yield": [0, 0, 2, 0, 0, 0],
+    "exp_yield": 71,
+    "catch_rate": 120,
+    "happiness": 70,
+    "ability": "shedskin",
+    "learnset": [
+      {"level": 1, "move": "harden"}
+    ],
+    "egg_groups": ["bug"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Beedrill", "level", 10]
+    ]
+  },
+  "15": {
+    "name": "Beedrill",
+    "type": ["bug", "poison"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [65, 90, 40, 45, 80, 75],
+    "ev_yield": [0, 2, 0, 0, 1, 0],
+    "exp_yield": 159,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": "swarm",
+    "hidden_ability": "sniper",
+    "learnset": [
+      {"level": 1, "move": "furyattack"},
+      {"level": 12, "move": "furyattack"},
+      {"level": 16, "move": "focusenergy"},
+      {"level": 20, "move": "twineedle"},
+      {"level": 25, "move": "rage"},
+      {"level": 30, "move": "pinmissile"},
+      {"level": 35, "move": "agility"}
+    ],
+    "egg_groups": ["bug"],
+    "egg_steps": 4080
+  },
+  "16": {
+    "name": "Pidgey",
+    "type": ["normal", "flying"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [40, 45, 40, 35, 35, 56],
+    "ev_yield": [0, 0, 0, 0, 0, 1],
+    "exp_yield": 55,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": ["keeneye", "tangledfeet"],
+    "hidden_ability": "bigpecks",
+    "learnset": [
+      {"level": 1, "move": "gust"},
+      {"level": 5, "move": "sandattack"},
+      {"level": 12, "move": "quickattack"},
+      {"level": 19, "move": "whirlwind"},
+      {"level": 28, "move": "wingattack"},
+      {"level": 36, "move": "agility"},
+      {"level": 44, "move": "mirrormove"}
+    ],
+    "egg_groups": ["flying"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Pidgeotto", "level", 18]
+    ],
+    "random_encounter": {
+      "common_grass": 0.5
+    }
+  },
+  "17": {
+    "name": "Pidgeotto",
+    "type": ["normal", "flying"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [63, 60, 55, 50, 50, 71],
+    "ev_yield": [0, 0, 0, 0, 0, 2],
+    "exp_yield": 113,
+    "catch_rate": 120,
+    "happiness": 70,
+    "ability": ["keeneye", "tangledfeet"],
+    "hidden_ability": "bigpecks",
+    "learnset": [
+      {"level": 1, "move": "gust"},
+      {"level": 1, "move": "sandattack"},
+      {"level": 5, "move": "sandattack"},
+      {"level": 12, "move": "quickattack"},
+      {"level": 21, "move": "whirlwind"},
+      {"level": 31, "move": "wingattack"},
+      {"level": 40, "move": "agility"},
+      {"level": 49, "move": "mirrormove"}
+    ],
+    "egg_groups": ["flying"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Pidgeot", "level", 36]
+    ]
+  },
+  "18": {
+    "name": "Pidgeot",
+    "type": ["normal", "flying"],
+    "experience": "MEDIUM_SLOW",
+    "base_stat": [83, 80, 75, 70, 70, 101],
+    "ev_yield": [0, 0, 0, 0, 0, 3],
+    "exp_yield": 172,
+    "catch_rate": 45,
+    "happiness": 70,
+    "ability": ["keeneye", "tangledfeet"],
+    "hidden_ability": "bigpecks",
+    "learnset": [
+      {"level": 1, "move": "gust"},
+      {"level": 1, "move": "sandattack"},
+      {"level": 1, "move": "quickattack"},
+      {"level": 5, "move": "sandattack"},
+      {"level": 12, "move": "quickattack"},
+      {"level": 21, "move": "whirlwind"},
+      {"level": 31, "move": "wingattack"},
+      {"level": 44, "move": "agility"},
+      {"level": 54, "move": "mirrormove"}
+    ],
+    "egg_groups": ["flying"],
+    "egg_steps": 4080
+  },
+  "19": {
+    "name": "Rattata",
+    "type": ["normal"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [30, 56, 35, 25, 35, 72],
+    "ev_yield": [0, 0, 0, 0, 0, 1],
+    "exp_yield": 57,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": ["runaway", "guts"],
+    "hidden_ability": "hustle",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"},
+      {"level": 7, "move": "quickattack"},
+      {"level": 14, "move": "hyperfang"},
+      {"level": 23, "move": "focusenergy"},
+      {"level": 34, "move": "superfang"}
+    ],
+    "egg_groups": ["field"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Raticate", "level", 20]
+    ],
+    "random_encounter": {
+      "common_grass": 0.5
+    }
+  },
+  "20": {
+    "name": "Raticate",
+    "type": "normal",
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [55, 81, 60, 50, 70, 97],
+    "ev_yield": [0, 0, 0, 0, 0, 2],
+    "exp_yield": 116,
+    "catch_rate": 90,
+    "happiness": 70,
+    "ability": ["runaway", "guts"],
+    "hidden_ability": "hustle",
+    "learnset": [
+      {"level": 1, "move": "tackle"},
+      {"level": 1, "move": "tailwhip"},
+      {"level": 1, "move": "quickattack"},
+      {"level": 7, "move": "quickattack"},
+      {"level": 14, "move": "hyperfang"},
+      {"level": 27, "move": "focusenergy"},
+      {"level": 41, "move": "superfang"}
+    ],
+    "egg_groups": ["field"],
+    "egg_steps": 4080
+  },
+  "21": {
+    "name": "Spearow",
+    "type": ["normal", "flying"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [40, 60, 30, 31, 31, 70],
+    "ev_yield": [0, 0, 0, 0, 0, 1],
+    "exp_yield": 58,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": "keeneye",
+    "hidden_ability": "sniper",
+    "learnset": [
+      {"level": 1, "move": "peck"},
+      {"level": 1, "move": "growl"},
+      {"level": 9, "move": "leer"},
+      {"level": 15, "move": "furyattack"},
+      {"level": 22, "move": "mirrormove"},
+      {"level": 29, "move": "drillpeck"},
+      {"level": 36, "move": "agility"}
+    ],
+    "egg_groups": ["flying"],
+    "egg_steps": 4080,
+    "evolution": [
+      ["Fearow", "level", 20]
+    ]
+    "random_encounter": {
+      "common_grass": 0.5
+    }
+  },
+  "22": {
+    "name": "Fearow",
+    "type": ["normal", "flying"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [65, 90, 65, 61, 100],
+    "ev_yield": [0, 0, 0, 0, 0, 2],
+    "exp_yield": 162,
+    "catch_rate": 90,
+    "happiness": 70,
+    "ability": "keeneye",
+    "hidden_ability": "sniper",
+    "learnset": [
+      {"level": 1, "move": "peck"},
+      {"level": 1, "move": "growl"},
+      {"level": 1, "move": "leer"},
+      {"level": 9, "move": "leer"},
+      {"level": 15, "move": "furyattack"},
+      {"level": 25, "move": "mirrormove"},
+      {"level": 34, "move": "drillpeck"},
+      {"level": 43, "move": "agility"}
+    ],
+    "egg_groups": ["flying"],
+    "egg_steps": 4080
+  },
+  "23": {
+    "name": "Ekans",
+    "type": ["poison"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [35, 60, 44, 40, 54, 55],
+    "ev_yield": [0, 1, 0, 0, 0, 0],
+    "exp_yield": 62,
+    "catch_rate": 255,
+    "happiness": 70,
+    "ability": ["intimidate", "shedskin"],
+    "hidden_ability": "unnerve",
+    "learnset": [
+      {"level": 1, "move": "wrap"},
+      {"level": 1, "move": "leer"},
+      {"level": 10, "move": "poisonsting"},
+      {"level": 17, "move": "bite"},
+      {"level": 24, "move": "glare"},
+      {"level": 31, "move": "screech"},
+      {"level": 38, "move": "acid"}
+    ],
+    "egg_groups": ["field", "dragon"],
+    "egg_steps": 5355,
+    "evolution": [
+      ["Arbok", "level", 22]
+    ],
+    "random_encounter": {
+      "common_grass": 0.3
+    }
+  },
+  "24": {
+    "name": "Arbok",
+    "type": ["poison"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [60, 95, 69, 65, 79, 80],
+    "ev_yield": [0, 2, 0, 0, 0, 0],
+    "exp_yield": 147,
+    "catch_rate": 90,
+    "happiness": 70,
+    "ability": ["intimidate", "shedskin"],
+    "hidden_ability": "unnerve",
+    "learnset": [
+      {"level": 1, "move": "wrap"},
+      {"level": 1, "move": "leer"},
+      {"level": 1, "move": "poisonsting"},
+      {"level": 10, "move": "poisonsting"},
+      {"level": 17, "move": "bite"},
+      {"level": 27, "move": "glare"},
+      {"level": 36, "move": "screech"},
+      {"level": 47, "move": "acid"}
+    ],
+    "egg_groups": ["field", "dragon"],
+    "egg_steps": 5355
+  },
+  "25": {
+    "name": "Pikachu",
+    "type": ["electric"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [35, 55, 40, 50, 50, 90],
+    "ev_yield": [0, 0, 0, 0, 0, 2],
+    "exp_yield": 82,
+    "catch_rate": 190,
+    "happiness": 70,
+    "ability": "static",
+    "hidden_ability": "lightningrod",
+    "learnset": [
+      {"level": 1, "move": "thundershock"},
+      {"level": 1, "move": "growl"},
+      {"level": 9, "move": "thunderwave"},
+      {"level": 16, "move": "quickattack"},
+      {"level": 26, "move": "swift"},
+      {"level": 33, "move": "agility"},
+      {"level": 43, "move": "thunder"}
+    ],
+    "egg_groups": ["field", "fairy"],
+    "egg_steps": 2805,
+    "evolution": [
+      ["Raichu", "item", "thunderstone"]
+    ],
+    "random_encounter": {
+      "common_grass": 0.1,
+      "rare_grass": 0.4
+    }
+  },
+  "26": {
+    "name": "Raichu",
+    "type": ["electric"],
+    "gender_rate": 0.5,
+    "experience": "MEDIUM_FAST",
+    "base_stat": [60, 90, 55, 90, 80, 110],
+    "ev_yield": [0, 0, 0, 0, 0, 3],
+    "exp_yield": 122,
+    "catch_rate": 75,
+    "happiness": 70,
+    "ability": "static",
+    "hidden_ability": "lightningrod",
+    "learnset": [
+      {"level": 1, "move": "thundershock"},
+      {"level": 1, "move": "growl"},
+      {"level": 9, "move": "thunderwave"}
+    ],
+    "egg_groups": [ "field", "fairy" ],
+    "egg_steps": 2805
+  }
+}

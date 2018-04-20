@@ -3,6 +3,7 @@ package com.ninjaphase.pokered.scene;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Disposable;
 import com.ninjaphase.pokered.PokemonApplication;
+import com.ninjaphase.pokered.util.ResourceManager;
 
 /**
  * <p>
@@ -10,9 +11,10 @@ import com.ninjaphase.pokered.PokemonApplication;
  *     game.
  * </p>
  */
-abstract class Scene implements Disposable {
+public abstract class Scene implements Disposable {
 
-    PokemonApplication app;
+    protected PokemonApplication app;
+    protected ResourceManager resourceManager;
 
     /**
      * <p>
@@ -21,8 +23,9 @@ abstract class Scene implements Disposable {
      *
      * @param app The application.
      */
-    Scene(PokemonApplication app) {
+    protected Scene(PokemonApplication app) {
         this.app = app;
+        this.resourceManager = new ResourceManager(this.app.getResourceManager());
     }
 
     /**
@@ -32,7 +35,7 @@ abstract class Scene implements Disposable {
      *
      * @param deltaTime The delta time passed.
      */
-    abstract void update(float deltaTime);
+    protected abstract void update(float deltaTime);
 
     /**
      * <p>
@@ -41,7 +44,7 @@ abstract class Scene implements Disposable {
      *
      * @param batch The sprite batch.
      */
-    abstract void render(SpriteBatch batch);
+    protected abstract void render(SpriteBatch batch);
 
     /**
      * Called when a key is pressed.
@@ -49,7 +52,7 @@ abstract class Scene implements Disposable {
      * @param keycode The key code.
      * @return Whether the key was used.
      */
-    boolean keyDown(int keycode) {
+    protected boolean keyDown(int keycode) {
         return false;
     }
 
@@ -60,7 +63,7 @@ abstract class Scene implements Disposable {
      * @param keycode The key code.
      * @return Whether the key was used.
      */
-    boolean keyUp(int keycode) {
+    protected boolean keyUp(int keycode) {
         return false;
     }
 

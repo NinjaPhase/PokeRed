@@ -1,0 +1,24 @@
+{
+  "name": "${player.name}'s Ship",
+  "internal_name": "001_Ship",
+  "tileset": "001_MainTileset",
+  "width": 8,
+  "height": 6,
+  "tiles": [
+    0, 0, 1, 2, 2, 2, 2, 3,
+    1, 3, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8,
+    0, 0, 8, 8, 8, 8, 8, 8
+  ],
+  "entities": [
+    {
+      "events": [
+        ["scene", {"scene": "random"}]
+      ],
+      "position": [2, 1],
+      "trigger": "touch"
+    }
+  ]
+}

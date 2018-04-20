@@ -1,0 +1,6 @@
+{
+  "name": "Pokemon Random",
+  "author": "NinjaPhase",
+  "start_map": ["001_Ship", 3, 4],
+  "player": "graphic.player.png"
+}

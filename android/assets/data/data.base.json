@@ -1,0 +1,12 @@
+{
+  "internal_stories": [
+    "story/PokemonRandom.zip"
+  ],
+  "internal_random": [
+    "data/random/randommaps.zip"
+  ],
+  "random_phrase": [
+    ["kan", "joh", "ho", "sin", "uno", "kal", "tia", "or"],
+    ["to", "enn", "noh", "re", "bo", "ko", "ro", "ar", "ab", "at"]
+  ]
+}

@@ -1,0 +1,32 @@
+bag_screen.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bag_bg
+  rotate: false
+  xy: 0, 0
+  size: 320, 180
+  orig: 320, 180
+  offset: 0, 0
+  index: -1
+bag_left
+  rotate: false
+  xy: 0, 180
+  size: 58, 59
+  orig: 58, 59
+  offset: 0, 0
+  index: -1
+bag_center
+  rotate: false
+  xy: 58, 180
+  size: 58, 63
+  orig: 58, 63
+  offset: 0, 0
+  index: -1
+bag_right
+  rotate: false
+  xy: 116, 180
+  size: 58, 59
+  orig: 58, 59
+  offset: 0, 0
+  index: -1

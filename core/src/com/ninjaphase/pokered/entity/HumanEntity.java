@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-import com.ninjaphase.pokered.data.TileMap;
+import com.ninjaphase.pokered.data.map.TileMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,13 +48,15 @@ public class HumanEntity extends Entity {
         this.targetX = this.tileX;
         this.targetY = this.tileY;
         if(texture != null) {
+            int pWidth = texture.getWidth()/4;
+            int pHeight = texture.getHeight()/4;
             this.animations = new Animation[4];
             for (int i = 0; i < this.animations.length; i++) {
                 this.animations[i] = new Animation<>(ANIM_DURATION,
-                        new TextureRegion(texture, 0, i * 16, 16, 16),
-                        new TextureRegion(texture, 16, i * 16, 16, 16),
-                        new TextureRegion(texture, 32, i * 16, 16, 16),
-                        new TextureRegion(texture, 48, i * 16, 16, 16)
+                        new TextureRegion(texture, 0, i * pHeight, pWidth, pHeight),
+                        new TextureRegion(texture, 16, i * pHeight, pWidth, pHeight),
+                        new TextureRegion(texture, 32, i * pHeight, pWidth, pHeight),
+                        new TextureRegion(texture, 48, i * pHeight, pWidth, pHeight)
                 );
             }
         }
@@ -218,7 +220,7 @@ public class HumanEntity extends Entity {
      * @param y The y coordinate.
      * @return Whether the users can move.
      */
-    private boolean canMove(int x, int y) {
+    boolean canMove(int x, int y) {
         return x >= 0 && x < this.map.getWidth() && y >= 0 && y < this.map.getHeight() && !this.map.getCollision(x, y);
     }
 

@@ -1,0 +1,32 @@
+summary_screen.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+summary_bg
+  rotate: false
+  xy: 0, 0
+  size: 320, 180
+  orig: 320, 180
+  offset: 0, 0
+  index: -1
+information_bar
+  rotate: false
+  xy: 0, 180
+  size: 230, 21
+  orig: 230, 21
+  offset: 0, 0
+  index: -1
+information_box
+  rotate: false
+  xy: 320, 0
+  size: 227, 151
+  orig: 227, 151
+  offset: 0, 0
+  index: -1
+right_box
+  rotate: false
+  xy: 320, 151
+  size: 88, 146
+  orig: 88, 146
+  offset: 0, 0
+  index: -1

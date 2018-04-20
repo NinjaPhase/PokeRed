@@ -1,0 +1,46 @@
+battle.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+enemy_box
+  rotate: false
+  xy: 0, 0
+  size: 100, 29
+  orig: 100, 29
+  offset: 0, 0
+  index: -1
+player_box
+  rotate: false
+  xy: 0, 29
+  size: 104, 37
+  orig: 104, 37
+  offset: 0, 0
+  index: -1
+health_fill
+  rotate: false
+  xy: 104, 0
+  size: 48, 3
+  orig: 48, 3
+  offset: 0, 0
+  index: -1
+health_fill_med
+  rotate: false
+  xy: 104, 3
+  size: 48, 3
+  orig: 48, 3
+  offset: 0, 0
+  index: -1
+health_fill_low
+  rotate: false
+  xy: 104, 6
+  size: 48, 3
+  orig: 48, 3
+  offset: 0, 0
+  index: -1
+exp_fill
+  rotate: false
+  xy: 104, 9
+  size: 64, 2
+  orig: 64, 2
+  offset: 0, 0
+  index: -1

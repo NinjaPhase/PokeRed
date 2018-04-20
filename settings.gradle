@@ -1,4 +1,5 @@
-include 'desktop', 'core'
+include ':android'
+include 'desktop', 'core', 'android'
 include 'editor'
 findProject(':editor')?.name = 'pokered-editor'
 

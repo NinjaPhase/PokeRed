@@ -1,5 +1,6 @@
 package com.ninjaphase.pokered.entity.event;
 
+import com.ninjaphase.pokered.scene.SceneManager;
 import com.ninjaphase.pokered.scene.gui.MessageBox;
 
 /**
@@ -33,5 +34,10 @@ public interface MapEventPlayer {
      * @return The message box for the map.
      */
     MessageBox getMessageBox();
+
+    /**
+     * @return The scene manager.
+     */
+    SceneManager getSceneManager();
 
 }

@@ -1,6 +1,8 @@
 package com.ninjaphase.pokered.scene.battle.event;
 
+import com.ninjaphase.pokered.scene.gui.EnemyStatusBox;
 import com.ninjaphase.pokered.scene.gui.MessageBox;
+import com.ninjaphase.pokered.scene.gui.PlayerStatusBox;
 
 /**
  * <p>
@@ -20,17 +22,14 @@ public interface BattleEventPlayer {
      *
      * @param ev The event to queue.
      */
-    public void queueEvent(BattleEvent ev);
+    void queueEvent(BattleEvent ev);
 
     /**
      * @return The messagebox for the event player.
      */
-    public MessageBox getMessageBox();
+    MessageBox getMessageBox();
 
-    public void setPlayerStatusHealth(int i);
-    public int getPlayerStatusHealth();
-
-    public void setOpponentStatusHealth(int i);
-    public int getOpponentStatusHealth();
+    PlayerStatusBox getPlayerStatus();
+    EnemyStatusBox getEnemyStatus();
 
 }

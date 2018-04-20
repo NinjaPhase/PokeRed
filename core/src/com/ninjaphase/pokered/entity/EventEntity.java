@@ -2,12 +2,12 @@ package com.ninjaphase.pokered.entity;
 
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.JsonValue;
-import com.ninjaphase.pokered.data.TileMap;
+import com.ninjaphase.pokered.data.map.TileMap;
 import com.ninjaphase.pokered.entity.event.MapEvent;
 import com.ninjaphase.pokered.entity.event.MessageMapEvent;
+import com.ninjaphase.pokered.entity.event.SceneMapEvent;
 import com.ninjaphase.pokered.entity.event.WarpMapEvent;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -51,6 +51,8 @@ public class EventEntity extends HumanEntity implements Disposable {
                 this.eventList.add(event = new MessageMapEvent(params));
             } else if(type.equalsIgnoreCase("warp")) {
                 this.eventList.add(event = new WarpMapEvent(params));
+            } else if(type.equalsIgnoreCase("scene")) {
+                this.eventList.add(event = new SceneMapEvent(params));
             } else {
                 throw new RuntimeException("Invalid event type " + type);
             }

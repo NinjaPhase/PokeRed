@@ -1,0 +1,130 @@
+types.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+type_normal
+  rotate: false
+  xy: 0, 0
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_fighting
+  rotate: false
+  xy: 0, 13
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_flying
+  rotate: false
+  xy: 0, 26
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_poison
+  rotate: false
+  xy: 0, 39
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_ground
+  rotate: false
+  xy: 0, 52
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_rock
+  rotate: false
+  xy: 0, 65
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_bug
+  rotate: false
+  xy: 0, 78
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_ghost
+  rotate: false
+  xy: 0, 91
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_steel
+  rotate: false
+  xy: 0, 104
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_fire
+  rotate: false
+  xy: 55, 0
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_water
+  rotate: false
+  xy: 55, 13
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_grass
+  rotate: false
+  xy: 55, 26
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_electric
+  rotate: false
+  xy: 55, 39
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_psychic
+  rotate: false
+  xy: 55, 52
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_ice
+  rotate: false
+  xy: 55, 65
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_dragon
+  rotate: false
+  xy: 55, 78
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_dark
+  rotate: false
+  xy: 55, 91
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+type_fairy
+  rotate: false
+  xy: 55, 104
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1

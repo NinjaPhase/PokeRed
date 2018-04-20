@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.ninjaphase.pokered.editor.components.TileSetViewer ?>
+<?import com.ninjaphase.pokered.editor.components.TileMapEditor ?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjaphase.pokered.editor.PokeredController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#onNewItem" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            <MenuItem onAction="#onLoadStory" mnemonicParsing="false" text="Open…">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="miClose" disable="true" mnemonicParsing="false" text="Close" onAction="#onCloseStory" />
+            <MenuItem fx:id="miSave" onAction="#onSaveStory" disable="true" mnemonicParsing="false" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            <MenuItem fx:id="miSaveAs" onAction="#onSaveStory" disable="true" mnemonicParsing="false" text="Save As…">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About Pokered Editor" />
+          </items>
+        </Menu>
+      </menus>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+    </MenuBar>
+      <ToolBar prefHeight="20.0" prefWidth="200.0" VBox.vgrow="NEVER">
+        <items>
+            <ToggleButton fx:id="btnPaint" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false" prefHeight="24.0" prefWidth="26.0" selected="true">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icon_brushpencil.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="grpPaintMode" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="btnEvents" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false" prefHeight="24.0" prefWidth="26.0" toggleGroup="$grpPaintMode">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icon_events.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </ToggleButton>
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="btnDatabase" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false" onAction="#onDatabaseOpen" prefHeight="24.0" prefWidth="26.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icon_database.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnResource" disable="true" mnemonicParsing="false" onAction="#onResourceOpen" prefHeight="24.0" prefWidth="26.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icon_resources.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Separator orientation="VERTICAL" />
+            <ToggleButton fx:id="btnLayerOne" disable="true" mnemonicParsing="false" onAction="#onLayerClick" prefHeight="24.0" prefWidth="26.0" selected="true">
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icon_layer_one.png" />
+                        <viewport>
+                            <Rectangle2D />
+                        </viewport>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </padding>
+                <toggleGroup>
+                    <ToggleGroup fx:id="grpLayers" />
+                </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="btnLayerTwo" disable="true" mnemonicParsing="false" onAction="#onLayerClick" prefHeight="24.0" prefWidth="26.0" toggleGroup="$grpLayers">
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icon_layer_two.png" />
+                        <viewport>
+                            <Rectangle2D />
+                        </viewport>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </padding>
+            </ToggleButton>
+            <ToggleButton fx:id="btnLayerThree" disable="true" mnemonicParsing="false" onAction="#onLayerClick" prefHeight="24.0" prefWidth="26.0" toggleGroup="$grpLayers">
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icon_layer_three.png" />
+                        <viewport>
+                            <Rectangle2D />
+                        </viewport>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </padding>
+            </ToggleButton>
+        </items>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </ToolBar>
+    <SplitPane dividerPositions="0.23162583518930957" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+            <SplitPane dividerPositions="0.6098003629764065" orientation="VERTICAL" prefHeight="519.0" prefWidth="224.0" SplitPane.resizableWithParent="false">
+              <items>
+                  <ScrollPane fx:id="scrTileset" prefHeight="200.0" prefWidth="200.0">
+                    <TileSetViewer fx:id="cvsTileset" />
+                  </ScrollPane>
+                  <TreeView fx:id="trMaps" onMouseClicked="#onChangeMap">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#onMapProperties" text="Properties..." />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#onNewMap" text="New Map...">
+                                  <accelerator>
+                                      <KeyCodeCombination alt="UP" code="INSERT" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                  </accelerator>
+                              </MenuItem>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#onDeleteMap" text="Delete..." />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></TreeView>
+              </items>
+            </SplitPane>
+        <ScrollPane fx:id="scrTilemap">
+              <TileMapEditor fx:id="cvsTilemap" height="179.0" width="277.0" />
+        </ScrollPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

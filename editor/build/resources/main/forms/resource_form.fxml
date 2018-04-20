@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TitledPane animated="false" collapsible="false" prefHeight="384.0" prefWidth="183.0" text="Resource Types">
+               <content>
+                  <ListView fx:id="lvResourceTypes" onMouseClicked="#onResourceTypesListClick" prefWidth="120.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" collapsible="false" prefHeight="384.0" prefWidth="292.0" text="Resources" HBox.hgrow="ALWAYS">
+               <content>
+                  <ListView fx:id="lvResources" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <VBox prefWidth="80.0" spacing="8.0">
+               <children>
+                  <Button minWidth="80.0" mnemonicParsing="false" onAction="#onImport" text="Import..." />
+                  <Button fx:id="btnPreview" disable="true" minWidth="80.0" mnemonicParsing="false" onAction="#onPreview" text="Preview..." />
+                  <Button fx:id="btnDelete" disable="true" minWidth="80.0" mnemonicParsing="false" onAction="#onDelete" text="Delete..." />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button minWidth="80.0" mnemonicParsing="false" onAction="#onClose" text="Close" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,40 @@
+{
+  "potion": {
+    "name": ["Potion", "Potions"],
+    "in_battle_effect": ["standard", {"event": "heal", "amount": 20}],
+    "price": 200
+  },
+  "superpotion": {
+    "name": ["Super Potion", "Super Potions"],
+    "in_battle_effect": ["standard", {"event": "heal", "amount": 50}],
+    "price": 700
+  },
+  "hyperpotion": {
+    "name": ["Hyper Potion", "Hyper Potions"],
+    "in_battle_effect": ["standard", {"event": "heal", "amount": 200}]
+  },
+  "maxpotion": {
+    "name": ["Max Potion", "Hyper Potions"],
+    "in_battle_effect": ["standard", {"event": "heal", "amount": "full"}]
+  },
+  "fullrestore": {
+    "name": ["Full Restore", "Full Restores"],
+    "in_battle_effect": ["standard", {"event": "heal", "amount": "fullstatus"}]
+  },
+  "pokeball": {
+    "name": ["Poké Ball", "Poké Balls"],
+    "in_battle_effect": ["standard", {"event": "catch", "rate": 1}]
+  },
+  "greatball": {
+    "name": ["Poké Ball", "Poké Balls"],
+    "in_battle_effect": ["standard", {"event": "catch", "rate": 1.5}]
+  },
+  "ultraball": {
+    "name": ["Poké Ball", "Poké Balls"],
+    "in_battle_effect": ["standard", {"event": "catch", "rate": 2}]
+  },
+  "masterball": {
+    "name": ["Poké Ball", "Poké Balls"],
+    "in_battle_effect": ["standard", {"event": "catch", "rate": 255}]
+  }
+}

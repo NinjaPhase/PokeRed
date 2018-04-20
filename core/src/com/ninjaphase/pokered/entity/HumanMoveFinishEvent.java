@@ -17,6 +17,6 @@ public interface HumanMoveFinishEvent {
      * @param y The y position.
      * @return The move step.
      */
-    public boolean onMoveStep(HumanEntity entity, int x, int y);
+    boolean onMoveStep(HumanEntity entity, int x, int y);
 
 }

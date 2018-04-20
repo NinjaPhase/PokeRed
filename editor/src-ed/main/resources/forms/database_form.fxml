@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab closable="false" text="General Settings">
+               <content>
+                  <fx:include fx:id="general" source="database_general_settings_form.fxml" />
+               </content>
+          </Tab>
+          <Tab closable="false" text="Tilesets">
+               <content>
+                  <fx:include fx:id="tileset" source="database_tilesets_form.fxml" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <HBox spacing="8.0">
+         <children>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button onAction="#onOK" defaultButton="true" minWidth="80.0" mnemonicParsing="false" text="OK" />
+            <Button onAction="#onCancel" cancelButton="true" minWidth="80.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="btnApply" onAction="#onApply" disable="true" minWidth="80.0" mnemonicParsing="false" text="Apply" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
